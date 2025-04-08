@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'Varela';
+    src: url('./assets/fonts/Varela-Regular.ttf') format('truetype');
+  }
+  
+body{
+    font-family: 'Varela', sans-serif;
+    background-color: #090909;
+}

@@ -1,10 +1,12 @@
     import React from 'react';
     import styled from 'styled-components';
 
-    const Button = ({text}) => {
+    const Button = ({text , href="https://wa.me/923334656544?text=Hi%20there%2C%20I%27m%20interested%20in%20your%20services"}) => {
     return (
         <StyledWrapper>
+            <a href={href} target="_blank" and rel="noopener noreferrer"  className='inline-block'>
         <button className="btn-donate">{text}</button>
+        </a>
         </StyledWrapper>
     );
     }

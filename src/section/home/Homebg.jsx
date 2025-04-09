@@ -228,6 +228,12 @@ const Particles = ({
     disableRotation,
   ]);
 
+  const handleClickWithDelay = (url) => {
+    setTimeout(() => {
+      window.open(url, "_blank");
+    }, 10000); // Delay in milliseconds
+  };
+
   return (
     <div
     ref={containerRef}
@@ -316,46 +322,50 @@ const Particles = ({
         </motion.div>
       </motion.div>
 
-      {/* Buttons */}
       <motion.div
-        initial="hidden"
-        animate="show"
-        variants={{
-          hidden: {},
-          show: {
-            transition: {
-              staggerChildren: 0.2,
-              delayChildren: 1.4,
-            }
-          }
-        }}
-        className="mt-6 flex gap-4"
-      >
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-        >
-          <Social1/>
-        </motion.div>
+  initial="hidden"
+  animate="show"
+  variants={{
+    hidden: {},
+    show: {
+      transition: {
+        staggerChildren: 0.2,
+        delayChildren: 1.4,
+      },
+    },
+  }}
+  className="mt-6 flex gap-4"
+>
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, ease: "easeOut" }}
+    whileTap={{ scale: 0.9 }}
+    onClick={() => handleClickWithDelay("https://twitter.com")}
+  >
+    <Social1 />
+  </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-        >
-          <Social2/>
-        </motion.div>
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+    whileTap={{ scale: 0.9 }}
+    onClick={() => handleClickWithDelay("https://linkedin.com")}
+  >
+    <Social2 />
+  </motion.div>
 
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
-        >
-          <Social3/>
-        </motion.div>
-
-      </motion.div>
+  <motion.div
+    initial={{ opacity: 0, y: 20 }}
+    animate={{ opacity: 1, y: 0 }}
+    transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+    whileTap={{ scale: 10 }}
+    onClick={() => handleClickWithDelay("https://github.com")}
+  >
+    <Social3 />
+  </motion.div>
+</motion.div>
 
     </div>
   </div>

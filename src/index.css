@@ -1,15 +1,19 @@
 @import "tailwindcss";
 
-
 @font-face {
   font-family: 'Varela';
-  src: url('./assets/fonts/Varela-Regular.ttf') format('truetype');
+  src: url('../fonts/Varela-Regular.ttf') format('truetype'); /* Make sure this path is public or inside 'public' folder */
 }
 
 :root {
- 
+  font-family: 'Varela', sans-serif;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Varela', sans-serif;
+  background-color: #000000;
 }

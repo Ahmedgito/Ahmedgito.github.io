@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Button = () => {
+const Button = ({href = "https://wa.me/923334656544?text=Hi%20there%2C%20I%27m%20interested%20in%20your%20services"}) => {
   return (
     <StyledWrapper>
+      <a href={href} target="_blank" and rel="noopener noreferrer"  className='inline-block'>
       <button className="Btn">
         <span className="svgContainer">
           <svg viewBox="0 0 448 512" fill="white" height="1.4em" xmlns="http://www.w3.org/2000/svg">
@@ -12,6 +13,7 @@ const Button = () => {
         </span>
         <span className="BG" />
       </button>
+      </a>
     </StyledWrapper>
   );
 }

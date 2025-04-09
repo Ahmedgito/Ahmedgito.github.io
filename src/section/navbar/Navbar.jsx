@@ -78,7 +78,7 @@ const Navbar = () => {
           transition={{ delay: 0.4 }}
           className="md:block hidden"
         >
-           <GithubButton />
+            <a target="_blank" and rel="noopener noreferrer" href="https://github.com/Ahmedgito"><GithubButton /></a>
         </motion.button>
 
         {/* Mobile Menu Button */}
@@ -125,7 +125,7 @@ const Navbar = () => {
               transition={{ delay: 0.5 }}
               className="md:hidden block"
             >
-              <a href="https://github.com/Ahmedgito"><GithubButton /></a>
+              <a target="_blank" and rel="noopener noreferrer"  href="https://github.com/Ahmedgito"><GithubButton /></a>
             </motion.button>
           </motion.div>
         )}

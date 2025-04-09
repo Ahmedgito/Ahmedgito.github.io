@@ -2,7 +2,7 @@
 
 @font-face {
   font-family: 'Varela';
-  src: url('../fonts/Varela-Regular.ttf') format('truetype'); /* Make sure this path is public or inside 'public' folder */
+  src: url('../public/fonts/Varela-Regular.ttf') format('truetype'); /* Make sure this path is public or inside 'public' folder */
 }
 
 :root {

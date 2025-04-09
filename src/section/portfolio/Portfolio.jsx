@@ -5,7 +5,7 @@ import img1 from "../../assets/images/haseeb.webp"
 import img2 from "../../assets/images/Auto.webp"
 import img3 from "../../assets/images/Mind.webp"  
 import img4 from "../../assets/images/Jafferi.webp"
-import img5 from "../../assets/images/Nizam.webp"
+import img5 from "../../assets/images/nizam.webp"
 import img6 from "../../assets/images/Teamo.webp"
 import img7 from "../../assets/images/webflow.webp"
 import { motion } from "framer-motion";

@@ -1,16 +1,29 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { X } from "lucide-react";
 import { Spin as Hamburger } from "hamburger-react";
 import { motion, AnimatePresence } from "framer-motion";
-import Logo from "../../components/Logo";
+import Logo from "../../assets/images/navlogo.svg";
 import GithubButton from "../../components/GithubButton";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const navItems = ["Home", "Portfolio", "Services", "Skills"];
 
-  // Framer variants  
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 10) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   const navItemVariant = {
     hidden: { opacity: 0, y: -10 },
     visible: (i) => ({
@@ -29,8 +42,11 @@ const Navbar = () => {
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-
-      className="fixed top-0 left-0 w-full  bg-black backdrop-blur-lg z-50 shadow-md"
+      className={`fixed top-0 left-0 w-full z-50 shadow-md transition-all duration-300 ${
+        scrolled
+          ? "bg-black/60 backdrop-blur-md"
+          : "bg-black"
+      }`}
     >
       <div className="container mx-auto flex items-center justify-between p-4">
         {/* Logo */}
@@ -38,20 +54,17 @@ const Navbar = () => {
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.2 }}
-          className="flex text-white items-center"
+          className="flex text-white items-center z-50"
         >
-          <Logo className="z-50"
-            sentence="M. Ahmed"
-            manualMode={false}
-            blurAmount={5}
-            borderColor="lightblue"
-            animationDuration={2}
-            pauseBetweenAnimations={1}
+          <img
+            src={Logo}
+            alt="M. Ahmed Logo"
+            className="w-[80px] mt-1 h-auto object-contain"
           />
         </motion.div>
 
         {/* Desktop Nav Links */}
-        <ul className="hidden md:flex space-x-6 text-white font-medium">
+        <ul className="hidden md:flex space-x-5 ms-28 text-white font-medium">
           {navItems.map((item, idx) => (
             <motion.li
               custom={idx}
@@ -78,7 +91,9 @@ const Navbar = () => {
           transition={{ delay: 0.4 }}
           className="md:block hidden"
         >
-            <a target="_blank" and rel="noopener noreferrer" href="https://github.com/Ahmedgito"><GithubButton /></a>
+          <a target="_blank" rel="noopener noreferrer" href="https://github.com/Ahmedgito">
+            <GithubButton />
+          </a>
         </motion.button>
 
         {/* Mobile Menu Button */}
@@ -125,7 +140,9 @@ const Navbar = () => {
               transition={{ delay: 0.5 }}
               className="md:hidden block"
             >
-              <a target="_blank" and rel="noopener noreferrer"  href="https://github.com/Ahmedgito"><GithubButton /></a>
+              <a target="_blank" rel="noopener noreferrer" href="https://github.com/Ahmedgito">
+                <GithubButton />
+              </a>
             </motion.button>
           </motion.div>
         )}

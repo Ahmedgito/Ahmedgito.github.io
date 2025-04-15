@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet'; // Import Helmet for SEO
 import Home from './section/home/Homebg';
 import Navbar from './section/navbar/Navbar';
 import Portfolio from './section/portfolio/Portfolio';
+import Top from "./components/Top";
 
 function App() {
   return (
@@ -71,6 +72,9 @@ function App() {
       />
 
       <Portfolio />
+      <div className='md:block hidden'>
+      <Top/>
+      </div>
     </>
   );
 }

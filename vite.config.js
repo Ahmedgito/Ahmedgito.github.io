@@ -7,5 +7,5 @@ export default defineConfig({
   plugins: [react(),
     tailwindcss()
   ],
-  base:"/Ahmedgito.github.io/",
+  base:"",
 })

@@ -76,7 +76,7 @@ const ScrollFloat = ({
   return (
     <h2
       ref={containerRef}
-      className={`my-5 text-center overflow-hidden ${containerClassName}`}
+      className={`my-5 -ms-5 text-center overflow-hidden ${containerClassName}`}
     >
       <span
         className={`inline-block text-white p-10 text-center ms-auto text-[clamp(1.6rem,4vw,3rem)] leading-[1.5] ${textClassName}`}

@@ -1,12 +1,12 @@
 import { useEffect, useRef } from "react";
 import { Renderer, Camera, Geometry, Program, Mesh } from "ogl";
-import RotatingText from "../../components/Text";
 import { motion } from "framer-motion";
 import Contact from "../../components/Contactbutton";
 import ProjectButton from "../../components/ProjectButton";
 import Social1 from "../../components/Social1";
 import Social2 from "../../components/Social2";
 import Social3 from "../../components/Social3";
+import HeaderText from "../../components/Headertext";
 
 const defaultColors = ["#ffffff", "#ffffff", "#ffffff"];
 
@@ -263,18 +263,7 @@ const Particles = ({
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.6 }}
         >
-          <RotatingText
-            texts={['M.Ahmed', 'a Software Engineer', 'a Web Developer', 'a Developer']}
-            mainClassName="px-2 sm:px-2 md:px-3 bg-cyan-300 text-black md:text-5xl text-3xl  overflow-hidden py-0.5 sm:py-1 md:py-2 justify-center rounded-lg"
-            staggerFrom="last"
-            initial={{ y: "100%" }}
-            animate={{ y: 0 }}
-            exit={{ y: "-120%" }}
-            staggerDuration={0.025}
-            splitLevelClassName="overflow-hidden pb-0.5 sm:pb-1 md:pb-1"
-            transition={{ type: "spring", damping: 30, stiffness: 400 }}
-            rotationInterval={2000}
-          />
+          <HeaderText/>
         </motion.div>
       </motion.h1>
 

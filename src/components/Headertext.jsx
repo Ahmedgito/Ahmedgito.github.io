@@ -5,7 +5,7 @@ const HeaderText = () => {
   return (
     <div className="content">
       <h1 className="title">
-       Hi , I'm M.Ahmed
+       Hi , I'm Ahmed
         <div className="aurora">
           <div className="aurora__item"></div>
           <div className="aurora__item"></div>

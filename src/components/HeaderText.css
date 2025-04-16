@@ -1,9 +1,9 @@
 
-:root {
+:root { 
   --bg: #000000;
   --clr-1: #00c2ff;
   --clr-2: #46a3f9;
-  --clr-3: #007efd;
+  --clr-3: #52a6fa;
   --clr-4: #72e5ff;
 
   --blur: 1rem;
@@ -25,10 +25,10 @@
   overflow: hidden;
   background: var(--bg);
   margin: 0;
+ 
 }
 
-.subtitle {
-}
+
 
 .aurora {
   position: absolute;
@@ -44,8 +44,8 @@
 .aurora__item {
   overflow: hidden;
   position: absolute;
-  width: 20vw;
-  height: 20vw;
+  width: 100vw;
+  height: 100vw;
   background-color: var(--clr-1);
   border-radius: 37% 29% 27% 27% / 28% 25% 41% 37%;
   filter: blur(var(--blur));
@@ -65,6 +65,7 @@
   animation: aurora-border 6s ease-in-out infinite,
     aurora-2 12s ease-in-out infinite alternate;
 }
+
 
 .aurora__item:nth-of-type(3) {
   background-color: var(--clr-2);

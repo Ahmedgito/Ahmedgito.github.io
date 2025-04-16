@@ -4,8 +4,10 @@ import Home from './section/home/Homebg';
 import Navbar from './section/navbar/Navbar';
 import Portfolio from './section/portfolio/Portfolio';
 import Top from "./components/Top";
-
+import LoadingScreen from "./components/Loadingscreen";
+import { useState } from 'react';
 function App() {
+  const [isLoaded, setIsLoaded] = useState(false);
   return (
     <>
       {/* SEO Meta Tags */}
@@ -58,6 +60,13 @@ function App() {
         </script>
       </Helmet>
 
+      {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}{" "}
+      <div
+        className={`min-h-screen transition-opacity duration-700 ${
+          isLoaded ? "opacity-100" : "opacity-0"
+        } bg-black text-gray-100`}
+      >
+    
       <Navbar />
 
       <Home
@@ -74,6 +83,7 @@ function App() {
       <Portfolio />
       <div className='md:block hidden'>
       <Top/>
+      </div>
       </div>
     </>
   );

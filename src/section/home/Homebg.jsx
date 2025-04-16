@@ -255,7 +255,7 @@ const Particles = ({
           transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
           className="bg-blue-300 text-transparent bg-clip-text "
         >
-          <span className="text-[#61daff]">Hi, I'm</span>
+         
         </motion.span>
 
         <motion.div

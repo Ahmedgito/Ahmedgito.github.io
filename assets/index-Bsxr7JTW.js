@@ -358,7 +358,7 @@ ${ob(i)}`)),this.gl.linkProgram(this.program),!this.gl.getProgramParameter(this.
 
   .Btn:hover .svgContainer {
     background-color: rgba(156, 156, 156, 0.466);
-  }`,ED=()=>P.jsx("div",{className:"content",children:P.jsxs("h1",{className:"title",children:["Hi , I'm M.Ahmed",P.jsxs("div",{className:"aurora",children:[P.jsx("div",{className:"aurora__item"}),P.jsx("div",{className:"aurora__item"}),P.jsx("div",{className:"aurora__item"}),P.jsx("div",{className:"aurora__item"})]})]})}),MD=["#ffffff","#ffffff","#ffffff"],CD=n=>{n=n.replace(/^#/,""),n.length===3&&(n=n.split("").map(o=>o+o).join(""));const t=parseInt(n,16),i=(t>>16&255)/255,s=(t>>8&255)/255,a=(t&255)/255;return[i,s,a]},OD=`
+  }`,ED=()=>P.jsx("div",{className:"content",children:P.jsxs("h1",{className:"title",children:["Hi , I'm Ahmed",P.jsxs("div",{className:"aurora",children:[P.jsx("div",{className:"aurora__item"}),P.jsx("div",{className:"aurora__item"}),P.jsx("div",{className:"aurora__item"}),P.jsx("div",{className:"aurora__item"})]})]})}),MD=["#ffffff","#ffffff","#ffffff"],CD=n=>{n=n.replace(/^#/,""),n.length===3&&(n=n.split("").map(o=>o+o).join(""));const t=parseInt(n,16),i=(t>>16&255)/255,s=(t>>8&255)/255,a=(t&255)/255;return[i,s,a]},OD=`
   attribute vec3 position;
   attribute vec4 random;
   attribute vec3 color;

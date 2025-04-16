@@ -74,7 +74,7 @@ export default function TiltedCard({
   return (
     <figure
       ref={ref}
-      className="left-20  relative w-full h-full [perspective:800px] flex flex-col items-center justify-center"
+      className="align-middle m-auto relative w-full h-full [perspective:800px] flex flex-col items-center justify-center"
       style={{
         height: containerHeight,
         width: containerWidth,

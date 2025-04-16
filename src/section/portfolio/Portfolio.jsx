@@ -113,7 +113,7 @@ const Portfolio = () => {
                   altText={card.altText}
                   captionText={card.captionText}
                   containerHeight="150px"
-                  containerWidth="200px"
+                  containerWidth="300px"
                   imageHeight="200px"
                   imageWidth="300px"
                   rotateAmplitude={12}
@@ -122,7 +122,7 @@ const Portfolio = () => {
                   showTooltip={true}
                   displayOverlayContent={false}
                   overlayContent={
-                    <p className="mt-7 ms-5 tilted-card-demo-text">
+                    <p className="mt-7  tilted-card-demo-text">
                       {card.captionText}
                     </p>
                   }

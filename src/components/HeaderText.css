@@ -17,7 +17,7 @@
   text-align: center;
 }
 
-.title {
+.title {    
   font-size: var(--fs);
   font-weight: 400;
   letter-spacing: var(--ls);

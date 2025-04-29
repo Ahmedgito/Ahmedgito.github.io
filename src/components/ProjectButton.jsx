@@ -4,11 +4,13 @@ import styled from 'styled-components';
 const Button = () => {
   return (
     <StyledWrapper>
-      <button className="button">
-        <div className="blob1" />
-        <div className="blob2" />
-        <div className="inner">Projects</div>
-      </button>
+      <a href="/ahmed-resume.pdf" download>
+        <button className="button">
+          <div className="blob1" />
+          <div className="blob2" />
+          <div className="inner">Download CV</div>
+        </button>
+      </a>
     </StyledWrapper>
   );
 }

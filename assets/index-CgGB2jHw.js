@@ -114,7 +114,7 @@ ${Z0(s)}`)),this.gl.linkProgram(this.program),!this.gl.getProgramParameter(this.
     }`,h6=()=>_.jsx(d6,{children:_.jsx("a",{href:"/ahmed-resume.pdf",download:!0,children:_.jsxs("button",{className:"button",children:[_.jsx("div",{className:"blob1"}),_.jsx("div",{className:"blob2"}),_.jsx("div",{className:"inner",children:"Download CV"})]})})}),d6=Ui.div`
   .button {
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     border-radius: 16px;
     border: none;
     padding: 2px;

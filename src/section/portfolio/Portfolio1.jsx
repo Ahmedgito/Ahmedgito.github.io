@@ -89,7 +89,7 @@ export default function ProjectsSection() {
                                     <img
                                         src={project.image}
                                         alt={project.title}
-                                        className="w-full h-48 md:h-76 object-cover"
+                                        className="w-full h-48 md:h-76 md:object-cover object-fill"
                                     />
                                 </motion.div>
                                 <div className="flex items-center px-3">

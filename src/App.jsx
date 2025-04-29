@@ -2,7 +2,6 @@ import './App.css';
 import { Helmet } from 'react-helmet';
 import Home from './section/home/Homebg';
 import Navbar from './section/navbar/Navbar';
-import Portfolio from './section/portfolio/Portfolio';
 import Portfolio1 from './section/portfolio/Portfolio1'
 import Top from "./components/Top";
 import LoadingScreen from "./components/Loadingscreen";
@@ -87,7 +86,6 @@ function App() {
         disableRotation={false}
       />
 
-      {/* <Portfolio /> */}
       <Portfolio1/>
       <div className='md:block hidden'>
 

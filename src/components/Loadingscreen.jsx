@@ -36,9 +36,9 @@ const LoadingScreen = ({ onComplete }) => {
       />
 
 
-      <div className="w-[200px] mt-5 h-[2px] bg-gray-800 rounded relative overflow-hidden">
+      <div className="w-[200px] mt-5 h-[3px] bg-gray-800 rounded relative overflow-hidden">
         <div
-          className="h-full bg-blue-400 shadow-[0_0_15px_#3b82f6] transition-all duration-100"
+          className="h-full bg-blue-300 shadow-[0_0_20px_#3b82f6] transition-all duration-100"
           style={{ width: `${progress}%` }}
         ></div>
       </div>

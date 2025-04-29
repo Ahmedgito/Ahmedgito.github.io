@@ -179,7 +179,7 @@ const Particles = ({
 
     const update = (t) => {
       animationFrameId = requestAnimationFrame(update);
-      const delta = t - lastTime;
+      const delta = t - lastTime; 
       lastTime = t;
       elapsed += delta * speed;
 
@@ -235,10 +235,12 @@ const Particles = ({
   };
 
   return (
-    <div
-    ref={containerRef}
-    className={`relative w-full bg-black h-screen overflow-hidden ${className}`}
-  >
+
+      <div
+      ref={containerRef}
+      className={`relative w-full bg-black h-screen overflow-hidden ${className}`}
+    >
+      
     {/* Overlay Content */}
     <div className="absolute inset-0 flex flex-col mt-28 items-center justify-center text-center px-4 z-10">
 

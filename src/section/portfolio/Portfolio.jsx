@@ -82,7 +82,7 @@ const Portfolio = () => {
          
             <See
               clr="#7808d0"
-              className="-ms-5 mb-8 mt-5"
+              className=" mb-8 mt-5"
               onClick={() => setShowAll(prev => !prev)}
             >
               {showAll ? "See Less" : "See More"}
@@ -135,7 +135,7 @@ const Portfolio = () => {
          
         <See
               clr="#7808d0"
-              className="mt-12 ms-2"
+              className="mt-12 "
               onClick={() => setShowAll(prev => !prev)}
             >
               {showAll ? "See Less" : "See More"}

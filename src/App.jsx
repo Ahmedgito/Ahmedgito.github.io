@@ -1,16 +1,22 @@
 import './App.css';
-import { Helmet } from 'react-helmet'; // Import Helmet for SEO
+import { Helmet } from 'react-helmet';
 import Home from './section/home/Homebg';
 import Navbar from './section/navbar/Navbar';
 import Portfolio from './section/portfolio/Portfolio';
+import Portfolio1 from './section/portfolio/Portfolio1'
 import Top from "./components/Top";
 import LoadingScreen from "./components/Loadingscreen";
 import { useState } from 'react';
+
+
 function App() {
+
   const [isLoaded, setIsLoaded] = useState(false);
+
   return (
     <>
-      {/* SEO Meta Tags */}
+
+      {/* SEO Meta Tags- Start */}
       <Helmet>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -59,6 +65,7 @@ function App() {
           `}
         </script>
       </Helmet>
+      {/* SEO Meta Tags- End */}
 
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}{" "}
       <div
@@ -80,8 +87,10 @@ function App() {
         disableRotation={false}
       />
 
-      <Portfolio />
+      {/* <Portfolio /> */}
+      <Portfolio1/>
       <div className='md:block hidden'>
+
       <Top/>
       </div>
       </div>

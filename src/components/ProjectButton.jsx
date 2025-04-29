@@ -18,7 +18,7 @@ const Button = () => {
 const StyledWrapper = styled.div`
   .button {
     cursor: pointer;
-    font-size: 1.2rem;
+    font-size: 1.0rem;
     border-radius: 16px;
     border: none;
     padding: 2px;

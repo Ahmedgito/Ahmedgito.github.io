@@ -47,7 +47,7 @@ const Footer = () => {
               href: "https://www.linkedin.com/in/m-ahmedd390/",
               icon: <FaLinkedin />,
             }, {
-              href: "mailto:your.email@example.com",
+              href: "mailto:m.ahmedd390@gmail.com",
               icon: <FaEnvelope />,
             }].map((item, index) => (
               <motion.a

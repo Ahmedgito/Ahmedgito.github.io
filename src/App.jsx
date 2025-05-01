@@ -6,6 +6,7 @@ import Portfolio1 from './section/portfolio/Portfolio1'
 import Top from "./components/Top";
 import LoadingScreen from "./components/Loadingscreen";
 import { useState } from 'react';
+import Footer from './section/footer/Footer';
 
 
 function App() {
@@ -23,14 +24,14 @@ function App() {
         <meta name="keywords" content="M.Ahmed, Full Stack Developer, React, JavaScript, Portfolio, Web Development, Node.js, MERN Stack, Vite, Tailwind CSS" />
         <meta name="author" content="Muhammad Ahmed" />
         <meta name="robots" content="index, follow" />
-        
+
         {/* Open Graph Tags */}
         <meta property="og:type" content="website" />
         <meta property="og:title" content="M.Ahmed - Full Stack Web Developer Portfolio" />
         <meta property="og:description" content="Explore Muhammad Ahmed's full stack web development portfolio, showcasing projects built with React, Node.js, and modern technologies." />
         <meta property="og:image" content="/og.jpg" /> {/* Replace with actual OG image path */}
         <meta property="og:url" content="https://yourdomain.com" /> {/* Replace with actual URL */}
-        
+
         {/* Twitter Card Tags */}
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="M.Ahmed - Full Stack Web Developer Portfolio" />
@@ -39,7 +40,7 @@ function App() {
 
         {/* Page Title */}
         <title>M.Ahmed - Full Stack Web Developer Portfolio</title>
-        
+
         {/* JSON-LD Schema for Structured Data */}
         <script type="application/ld+json">
           {`
@@ -68,29 +69,34 @@ function App() {
 
       {!isLoaded && <LoadingScreen onComplete={() => setIsLoaded(true)} />}{" "}
       <div
-        className={`min-h-screen transition-opacity duration-700 ${
-          isLoaded ? "opacity-100" : "opacity-0"
-        } bg-black text-gray-100`}
+        className={`min-h-screen transition-opacity duration-700 ${isLoaded ? "opacity-100" : "opacity-0"
+          } bg-black text-gray-100`}
       >
-    
-      <Navbar />
 
-      <Home
-        particleColors={['#ffffff', '#ffffff']}
-        particleCount={300}
-        particleSpread={20}
-        speed={0.1}
-        particleBaseSize={100}
-        moveParticlesOnHover={true}
-        alphaParticles={false}
-        disableRotation={false}
-      />
+        <Navbar />
 
-      <Portfolio1/>
-      <div className='md:block hidden'>
+        <div id="home">
+          <Home
+            particleColors={['#ffffff', '#ffffff']}
+            particleCount={300}
+            particleSpread={20}
+            speed={0.1}
+            particleBaseSize={100}
+            moveParticlesOnHover={true}
+            alphaParticles={false}
+            disableRotation={false}
+          />
+        </div>
 
-      <Top/>
-      </div>
+        <div id="portfolio">
+          <Portfolio1 />
+          <div className='md:block hidden'>
+          </div>
+
+          <Footer/> 
+
+          <Top />
+        </div>
       </div>
     </>
   );

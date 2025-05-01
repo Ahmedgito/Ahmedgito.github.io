@@ -9,15 +9,15 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
-  const navItems = ["Home", "Projects", "Services", "Skills"];
+  const navItems = [
+    { label: "Home", href: "#home" },
+    { label: "Projects", href: "#projects" },
+
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
-      if (window.scrollY > 10) {
-        setScrolled(true);
-      } else {
-        setScrolled(false);
-      }
+      setScrolled(window.scrollY > 10);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -37,15 +37,17 @@ const Navbar = () => {
     }),
   };
 
+  const handleNavClick = () => {
+    setIsOpen(false);
+  };
+
   return (
     <motion.nav
       initial={{ y: -80, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
       className={`fixed top-0 left-0 w-full z-50 shadow-md transition-all duration-300 ${
-        scrolled
-          ? "bg-black/60 backdrop-blur-md"
-          : "bg-black"
+        scrolled ? "bg-black/60 backdrop-blur-md" : "bg-black"
       }`}
     >
       <div className="container mx-auto flex items-center justify-between p-4">
@@ -74,10 +76,10 @@ const Navbar = () => {
               key={idx}
             >
               <a
-                href="#"
+                href={item.href}
                 className="relative group px-2 py-1 transition-all duration-300 ease-in-out"
               >
-                {item}
+                {item.label}
                 <span className="absolute left-0 bottom-0 w-0 h-[2px] bg-cyan-300 transition-all duration-300 group-hover:w-full group-hover:drop-shadow-[0_0_4px_#22d3ee]"></span>
               </a>
             </motion.li>
@@ -91,7 +93,11 @@ const Navbar = () => {
           transition={{ delay: 0.4 }}
           className="md:block hidden"
         >
-          <a target="_blank" rel="noopener noreferrer" href="https://github.com/Ahmedgito">
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://github.com/Ahmedgito"
+          >
             <GithubButton />
           </a>
         </motion.button>
@@ -122,13 +128,14 @@ const Navbar = () => {
             {navItems.map((item, idx) => (
               <motion.a
                 key={idx}
-                href="#"
+                href={item.href}
+                onClick={handleNavClick}
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.1 * idx }}
                 className="relative group text-white text-2xl px-4 py-2 transition-all duration-300 ease-in-out"
               >
-                {item}
+                {item.label}
                 <span className="block h-[2px] bg-cyan-400 w-0 group-hover:w-full transition-all duration-300 group-hover:drop-shadow-[0_0_6px_#22d3ee]"></span>
               </motion.a>
             ))}
@@ -140,7 +147,11 @@ const Navbar = () => {
               transition={{ delay: 0.5 }}
               className="md:hidden block"
             >
-              <a target="_blank" rel="noopener noreferrer" href="https://github.com/Ahmedgito">
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://github.com/Ahmedgito"
+              >
                 <GithubButton />
               </a>
             </motion.button>

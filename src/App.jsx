@@ -7,6 +7,7 @@ import Top from "./components/Top";
 import LoadingScreen from "./components/Loadingscreen";
 import { useState } from 'react';
 import Footer from './section/footer/Footer';
+import Contribution from './components/Contribution';
 
 
 function App() {
@@ -93,7 +94,9 @@ function App() {
           <div className='md:block hidden'>
           </div>
 
-          <Footer/> 
+        <Contribution/>
+
+          <Footer />
 
           <Top />
         </div>

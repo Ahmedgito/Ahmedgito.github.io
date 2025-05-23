@@ -5,7 +5,7 @@ const Contribution = () => {
   return (
     <>
       <motion.h3
-        className="text-4xl text-center md:text-5xl mb-10 mt-20 font-medium"
+        className="text-4xl text-center md:text-5xl mb-10 mt-15 font-medium"
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, ease: 'easeOut' }}

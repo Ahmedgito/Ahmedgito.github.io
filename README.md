@@ -1,4 +1,4 @@
-# 🌐 Ahmed Gito — Personal Portfolio Website
+# 🌐 My Portfolio Website
 
 This is the source code for **Ahmed Gito's personal portfolio website**, built to showcase projects, skills, and contact information in a modern, responsive design.
 

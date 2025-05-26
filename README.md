@@ -8,7 +8,7 @@ This is the source code for **Ahmed Gito's personal portfolio website**, built t
 
 ## 🖼️ Preview
 
-![Portfolio Screenshot](./screenshot.png)
+![Portfolio Screenshot](./public/screenshot.png)
 
 ---
 

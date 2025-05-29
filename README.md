@@ -2,6 +2,11 @@
 
 This is the source code for **Ahmed Gito's personal portfolio website**, built to showcase projects, skills, and contact information in a modern, responsive design.
 
+---
+
+![Last Commit](https://img.shields.io/github/last-commit/Ahmedgito/My-Portfolio-Web)
+![Languages](https://img.shields.io/github/languages/top/Ahmedgito/My-Portfolio-Web)
+
 > 🔗 **Live Site**: [ahmedgito-github-io.vercel.app](https://ahmedgito-github-io.vercel.app)
 
 ---

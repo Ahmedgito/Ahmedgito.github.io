@@ -1,12 +1,47 @@
-# React + Vite
+# 🌐 My Portfolio Website
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the source code for **Ahmed Gito's personal portfolio website**, built to showcase projects, skills, and contact information in a modern, responsive design.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![Last Commit](https://img.shields.io/github/last-commit/Ahmedgito/My-Portfolio-Web)
+![Languages](https://img.shields.io/github/languages/top/Ahmedgito/My-Portfolio-Web)
 
-## Expanding the ESLint configuration
+> 🔗 **Live Site**: [ahmedgito-github-io.vercel.app](https://ahmedgito-github-io.vercel.app)
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🖼️ Preview
+
+![Portfolio Screenshot](./public/screenshot.png)
+
+---
+
+## ✨ Features
+
+- 🧑‍💻 Clean and professional portfolio design
+- 📱 Fully responsive layout (mobile, tablet, desktop)
+- 🛠️ Projects showcase with descriptions and links
+- 📇 About section with skills and experience
+- 📬 Contact form with interactive UI
+- 🚀 Deployed on Vercel for fast global delivery
+
+---
+
+## 🧰 Tech Stack
+
+- **Framework**: [React](https://reactjs.org/)
+- **Styling**: [Tailwind CSS](https://tailwindcss.com/)
+- **Animations**: Framer Motion *(based on UI transitions)*
+- **Deployment**: [Vercel](https://vercel.com/)
+
+---
+
+## 📦 Installation
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/your-username/your-repo-name.git
+cd your-repo-name
+npm install
